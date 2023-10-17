@@ -34,16 +34,16 @@ int	ft_atoi2(const char *str)
 		str++;
 	}
 	if (*str == '\0')
-		ft_error();
+		return (2147483648);
 	while (*str)
 	{
 		if (!ft_isdigit(*str))
-			ft_error();
+			return (2147483648);
 		i = i * 10 + (*str - 48);
 		str++;
 	}
 	if ((mod * i) > 2147483647 || (mod * i) < -2147483648)
-		ft_error();
+		return (2147483648);
 	return (mod * i);
 }
 
@@ -62,6 +62,8 @@ t_stack	*ft_process(int argc, char **argv)
 		while (i < argc)
 		{
 			j = ft_atoi2(argv[i]);
+			if (j == 2147483648)
+				ft_error();
 			ft_add_back(&a, ft_stack_new(j));
 			i++;
 		}

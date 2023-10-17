@@ -6,7 +6,7 @@
 /*   By: rlima-fe <rlima-fe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 12:54:18 by rlima-fe          #+#    #+#             */
-/*   Updated: 2023/09/27 14:05:42 by rlima-fe         ###   ########.fr       */
+/*   Updated: 2023/10/17 16:03:45 by rlima-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,12 @@ int	ft_atoi2(const char *str)
 
 	i = 0;
 	mod = 1;
-	while (*str == ' ' || *str == '\t' || *str == '\n' || *str == '\f'
-		|| *str == '\v' || *str == '\r' || *str == '+')
+	while (*str == ' ' || *str == '\t' || *str == '\n')
 		str++;
-	if (*str == '-')
+	if (*str == '-' || *str == '+')
 	{
-		mod = -1;
+		if (*str == '-')
+			mod = -1;
 		str++;
 	}
 	if (*str == '\0')

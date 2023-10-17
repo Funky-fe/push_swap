@@ -6,7 +6,7 @@
 #    By: rlima-fe <rlima-fe@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/27 16:46:05 by rlima-fe          #+#    #+#              #
-#    Updated: 2023/10/02 15:31:30 by rlima-fe         ###   ########.fr        #
+#    Updated: 2023/10/14 13:00:23 by rlima-fe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,6 @@ NAME = push_swap
 CC = gcc -g
 RM = rm -f
 FLAGS = -Wall -Wextra -Werror
-LIBFTDIR = libft/
 OBJ_DIR = obj/
 BONUS = checker
 SRC_DIR = srcs/

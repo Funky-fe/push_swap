@@ -6,7 +6,7 @@
 /*   By: rlima-fe <rlima-fe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 12:20:46 by rlima-fe          #+#    #+#             */
-/*   Updated: 2023/09/28 12:13:37 by rlima-fe         ###   ########.fr       */
+/*   Updated: 2023/10/26 16:53:00 by rlima-fe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,8 @@ int	main(int ac, char **av)
 	t_stack	*b;
 	char	*line;
 
+	if (ac == 1)
+		return (0);
 	b = NULL;
 	a = ft_process(ac, av);
 	if (!a || ft_checkdup(a))
